@@ -78,9 +78,15 @@ The existence of such objects supports the hypothesis that visible structure is 
 - Bounded numerics (clipping, safe denominators, normalized temperature)
 
 ### Quick Start
-
+git clone https://github.com/Silvershadow999/dm-resonance-interface.git
+cd dm-resonance-interface
+pip install -r requirements.txt
+python examples/inverse_problem_solver.py
+![Inverse Problem Plot](results/plots/inverse_problem_refined_vs_baseline.png)
 ```bash
 git clone https://github.com/Silvershadow999/dm-resonance-interface.git
 cd dm-resonance-interface
 pip install -r requirements.txt
 python examples/inverse_problem_solver.py
+
+![Inverse Problem Plot](results/plots/inverse_problem_refined_vs_baseline.png)
