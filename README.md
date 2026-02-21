@@ -8,6 +8,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
+### Important Disclaimer
+
+This repository does **NOT** claim evidence of dark-matter coupling.  
+It provides a **numerical simulation and inverse-sensitivity framework** to test whether coherence-based hypotheses generate stable and falsifiable predictions.
+
 ### Abstract
 
 We propose that several major cosmological tensions (Hubble tension ΔH₀/H₀ ≈ 8.3%, S₈ discrepancy \~15%, Fermi 20 GeV gamma-ray halo, local DM density anomalies \~18%, and axion-photon resonances \~12%) can be partially explained as dynamical feedback from coherent systems in the intermediate (projector) layer via a weak dark-sector coupling channel.
@@ -18,20 +23,16 @@ Extreme coherence (low DOC, high C) improves upward transfer efficiency from \~2
 
 **Keywords**: dark matter coupling, coherence amplification, Hubble tension, inverse problem, multiscale resonance, φ-scaling
 
-> **Important Disclaimer**  
-> This repository does **not** claim evidence of dark-matter coupling.  
-> It provides a **numerical simulation and inverse-sensitivity framework** to test whether coherence-based hypotheses generate stable and falsifiable predictions.
-
 ### Why this repo exists
 
 Many ambitious models fail because they mix assumptions, metaphors, and claims of evidence.  
-DMRI tries to separate these layers:
+DMRI separates these layers:
 
 1. **Model layer (numerical)**: bounded equations, inverse estimates, threshold functions  
 2. **Hypothesis layer (interpretation)**: possible weakly-coupled / low-loss channel assumptions  
 3. **Validation layer (empirical)**: proxy amplitudes, sensitivity tests, uncertainty analysis
 
-The goal is not “proof by simulation”, but **structured exploration**.
+The goal is structured exploration — not proof by simulation.
 
 ### Core idea (numerical abstraction)
 
@@ -43,8 +44,6 @@ DMRI uses a proxy-based inverse framework in which the required coupling strengt
 \]
 
 **Refined inverse estimate (noise-floor constrained)**  
-A refined version includes a dimensionless noise floor proxy:
-
 \[
 \kappa_{dm}^{refined} = \frac{\Delta \cdot N(T, stress, C)}{C^4 \cdot (1-DOC) \cdot \varphi^{-1} \cdot \eta}
 \]
@@ -54,18 +53,14 @@ with noise proxy:
 N(T, stress, C) \propto \frac{T}{T_{ref}} \cdot (1-C) \cdot (1+stress)
 \]
 
-This is a modeling choice, not a derived law of nature.
-
 ### Real-World Evidence
 
-Recent observations (JWST, Euclid, Subaru 2025–2026) have confirmed ultra-diffuse galaxies (e.g. Candidate Dark Galaxy-2, CDG-2) where >99 % of mass is dark matter, with only faint globular clusters and minimal baryonic emission.
+Recent observations (JWST, Euclid, Subaru 2025–2026) have confirmed ultra-diffuse galaxies (e.g. Candidate Dark Galaxy-2) where >99 % of mass is dark matter, with only faint globular clusters and minimal baryonic emission.
 
 This matches the model's prediction:
 - High DOC in the projector layer → baryonic projection fades  
 - Dark sector takes over structure maintenance → stable DM-dominated system  
 - Normal galaxies require continuous coherent projection from the intermediate layer to prevent being "swallowed" by DM.
-
-The existence of such objects supports the hypothesis that visible structure is an active, coherence-maintained exception, not the default state.
 
 ### Current features
 
@@ -78,15 +73,9 @@ The existence of such objects supports the hypothesis that visible structure is 
 - Bounded numerics (clipping, safe denominators, normalized temperature)
 
 ### Quick Start
-git clone https://github.com/Silvershadow999/dm-resonance-interface.git
-cd dm-resonance-interface
-pip install -r requirements.txt
-python examples/inverse_problem_solver.py
-![Inverse Problem Plot](results/plots/inverse_problem_refined_vs_baseline.png)
+
 ```bash
 git clone https://github.com/Silvershadow999/dm-resonance-interface.git
 cd dm-resonance-interface
 pip install -r requirements.txt
 python examples/inverse_problem_solver.py
-
-![Inverse Problem Plot](results/plots/inverse_problem_refined_vs_baseline.png)
