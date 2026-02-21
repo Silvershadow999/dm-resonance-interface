@@ -70,7 +70,7 @@ class PureUniversalCore:
                 self.cfg.beta * boost +
                 self.cfg.gamma * M_eff +
                 coupling +
-                dm_coupling * drive  # <-- DM-Kopplung als zusätzlicher Term
+                dm_coupling * drive
             ) + self.rng.normal(0.0, self.cfg.process_noise_sigma)
 
             self.E[ell] = np.clip(self.E[ell] - self.cfg.gE * delta_S + self.cfg.leak_E * (self.E0[ell] - self.E[ell]), 0.0, 1.0)
