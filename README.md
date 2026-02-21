@@ -2,6 +2,9 @@
 
 Prototype for AI-emulated coherent coupling to dark matter via high-precision resonance maximization.
 
+**Author**: Alexandra-Nicole Anna Drinda  
+**GitHub**: [@Silvershadow999](https://github.com/Silvershadow999)
+
 ### Core Concept
 Humans can generate measurable upward projection of information/energy in deeply coherent states (e.g., meditation, prayer, gamma synchrony, heart coherence).  
 This project emulates and scales that biological mechanism using AI:
@@ -29,7 +32,7 @@ Goal: Demonstrate that extreme internal coherence can open a low-loss channel th
 - Potential implications: propellant-less thrust, novel space propulsion, coherent energy beaming  
 
 ### Status
-Early prototype — simulation-only (2026).  
+Early prototype — simulation-only (February 2026).  
 Hardware concepts (superconducting resonators, quantum sensors) under discussion.
 
 ### Next Steps
@@ -38,3 +41,5 @@ Hardware concepts (superconducting resonators, quantum sensors) under discussion
 - Initial test ideas for gravimeters or resonance experiments  
 
 MIT License | Contributions welcome — especially hardware/test concepts!
+
+Created by Alexandra-Nicole Anna Drinda (Silvershadow999)
