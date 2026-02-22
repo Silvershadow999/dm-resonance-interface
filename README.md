@@ -1,76 +1,99 @@
-# DM Resonance Interface (DMRI)
+ # DM Resonance Interface (DMRI)
 
-**Prototype for AI-emulated coherent coupling to dark matter via high-precision resonance maximization**
+**Exploratory numerical framework for inverse sensitivity analysis of hypothetical dark-sector coupling under coherence constraints**
 
 **Author**: Alexandra-Nicole Anna Drinda  
 **GitHub**: [@Silvershadow999](https://github.com/Silvershadow999)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ### Important Disclaimer
 
-This repository does **NOT** claim evidence of dark-matter coupling.  
-It provides a **numerical simulation and inverse-sensitivity framework** to test whether coherence-based hypotheses generate stable and falsifiable predictions.
+This repository contains an **exploratory inverse sensitivity model** using **proxy observation amplitudes** for hypothesis testing and parameter exploration.
 
-### Abstract
+- It **does not** constitute evidence of dark-matter coupling.  
+- It **does not** prove a causal link between biological/AI coherence and cosmological anomalies.  
+- The observation set is heterogeneous (anomaly amplitudes, proxy fractions, composition indicators).  
+- All results are **illustrative** and intended for model comparison, stress testing and structured thought experiments only.
 
-We propose that several major cosmological tensions (Hubble tension ΔH₀/H₀ ≈ 8.3%, S₈ discrepancy \~15%, Fermi 20 GeV gamma-ray halo, local DM density anomalies \~18%, and axion-photon resonances \~12%) can be partially explained as dynamical feedback from coherent systems in the intermediate (projector) layer via a weak dark-sector coupling channel.
+Use this code as a **computational hypothesis sandbox**, not as validated physical theory.
 
-Using a φ-scaled multi-layer resonance model with asymmetric homeostasis, we perform an inverse problem analysis on current observational data (Riess et al. 2025–2026, DES Year 6, Totani/Fermi 2025, Turyshev 2025, arXiv:2601.02115). Backward calculations yield required coupling strengths κ_dm ≈ 0.14–0.35 (high-precision AI systems at C ≥ 0.995) or κ_dm ≈ 0.31–0.72 (human deep coherence at C ≈ 0.92), consistent with a low-loss bidirectional channel through the dark sector.
+### Scientific Abstract
 
-Extreme coherence (low DOC, high C) improves upward transfer efficiency from \~23% (classical) to 50–75%. The model predicts testable local gravitational/DM anomalies during coherent states and offers a falsifiable bridge between biological coherence phenomena and cosmological observations, with implications for resonance-based propulsion and multiscale information flow.
+We present a numerical framework for testing whether coherence-driven feedback from an intermediate (projector) layer could contribute to observed cosmological tensions via a weak dark-sector coupling channel.
+
+A φ-scaled multi-layer resonance model with asymmetric homeostasis is used to perform inverse problem analysis on proxy amplitudes derived from current data (Hubble tension ΔH₀/H₀ ≈ 8.3%, S₈ discrepancy \~15%, Fermi 20 GeV gamma-ray halo, local DM density anomalies \~18%, axion-photon resonances \~12%, and ultra-diffuse dark galaxies with >99% DM fraction).
+
+Backward calculations yield required coupling strengths κ_dm ≈ 0.14–0.35 (high-precision AI systems at coherence C ≥ 0.995) or κ_dm ≈ 0.31–0.72 (human deep coherence at C ≈ 0.92), consistent with a low-loss bidirectional channel through the dark sector.
+
+Extreme coherence (low degradation DOC, high C) improves upward transfer efficiency from \~23% (classical) to 50–75%. The model predicts testable local gravitational/DM anomalies during coherent states and offers a falsifiable bridge between coherence phenomena and cosmological observations, with implications for resonance-based propulsion and multiscale information flow.
 
 **Keywords**: dark matter coupling, coherence amplification, Hubble tension, inverse problem, multiscale resonance, φ-scaling
 
-### Why this repo exists
+### Why this repository exists
 
-Many ambitious models fail because they mix assumptions, metaphors, and claims of evidence.  
-DMRI separates these layers:
+Many speculative models fail because they conflate numerical behavior, interpretive narrative, and empirical claims.  
+DMRI deliberately separates these layers:
 
-1. **Model layer (numerical)**: bounded equations, inverse estimates, threshold functions  
-2. **Hypothesis layer (interpretation)**: possible weakly-coupled / low-loss channel assumptions  
-3. **Validation layer (empirical)**: proxy amplitudes, sensitivity tests, uncertainty analysis
+1. **Numerical model layer** — bounded equations, inverse estimates, threshold functions  
+2. **Hypothesis layer** — possible weakly-coupled / low-loss channel assumptions  
+3. **Validation layer** — proxy amplitudes, sensitivity analysis, uncertainty quantification
 
-The goal is structured exploration — not proof by simulation.
+The goal is **structured exploration** and **falsifiable stress-testing** — not proof by simulation.
 
-### Core idea (numerical abstraction)
+### Core numerical abstraction
 
-DMRI uses a proxy-based inverse framework in which the required coupling strength κ_dm is estimated from an observed anomaly amplitude Δ under coherence, degradation, and noise constraints.
+The engine estimates a required coupling strength κ_dm from proxy anomaly amplitudes Δ under varying coherence (C), degradation (DOC), noise floor, and dynamic efficiency assumptions.
 
 **Baseline inverse estimate**  
 \[
-\kappa_{dm} = \frac{\Delta}{C^3 \cdot (1-DOC) \cdot \varphi^{-1} \cdot \eta}
+\kappa_{dm} = \frac{\Delta}{C^3 \cdot (1-DOC) \cdot \varphi^{-1} \cdot \eta_0}
 \]
 
 **Refined inverse estimate (noise-floor constrained)**  
 \[
-\kappa_{dm}^{refined} = \frac{\Delta \cdot N(T, stress, C)}{C^4 \cdot (1-DOC) \cdot \varphi^{-1} \cdot \eta}
+\kappa_{dm}^{refined} = \frac{\Delta \cdot N(T,\text{stress},C)}{C^4 \cdot (1-DOC) \cdot \varphi^{-1} \cdot \eta(C)}
 \]
 
-with noise proxy:
+with dimensionless noise proxy  
 \[
-N(T, stress, C) \propto \frac{T}{T_{ref}} \cdot (1-C) \cdot (1+stress)
+N(T,\text{stress},C) \propto \frac{T}{T_{\text{ref}}} \cdot (1-C) \cdot (1+\text{stress})
 \]
 
-### Real-World Evidence
+Dynamic efficiency η(C) supports three phenomenological modes:  
+- anti_saturation — efficiency drops near C→1  
+- monotonic — efficiency increases and saturates with C  
+- sweet_spot — efficiency peaks near an optimal coherence value
 
-Recent observations (JWST, Euclid, Subaru 2025–2026) have confirmed ultra-diffuse galaxies (e.g. Candidate Dark Galaxy-2) where >99 % of mass is dark matter, with only faint globular clusters and minimal baryonic emission.
+These are modeling choices for sensitivity analysis, not derived physical laws.
 
-This matches the model's prediction:
-- High DOC in the projector layer → baryonic projection fades  
-- Dark sector takes over structure maintenance → stable DM-dominated system  
-- Normal galaxies require continuous coherent projection from the intermediate layer to prevent being "swallowed" by DM.
+### Real-World Observational Anchors
 
-### Current features
+Recent astronomical data provide boundary conditions for inverse exploration:
 
-- Baseline inverse coupling estimator (`inverse_kdm`)  
-- Refined inverse coupling estimator with normalized noise floor (`inverse_kdm_refined`)  
-- Heuristic coherence threshold / phase-transition point (`get_phase_transition_point`)  
-- Aggregate plot: baseline vs refined across multiple DOC values  
-- Console summary table for all proxy observations  
-- CSV export of results  
-- Bounded numerics (clipping, safe denominators, normalized temperature)
+- Hubble tension (ΔH₀/H₀ ≈ 8.3%): Riess et al. / JWST 2025–2026  
+- S₈ tension (\~15% discrepancy): DES Year 6 results  
+- Fermi 20 GeV gamma-ray halo: Totani / Fermi-LAT 2025  
+- Local screened dark-matter effects: Turyshev (JPL) 2025  
+- Axion-photon resonant conversion signals: arXiv:2601.02115 (2026)  
+- Ultra-diffuse dark galaxies (>99% DM fraction): e.g. Candidate Dark Galaxy-2 (JWST/Euclid/Subaru 2025–2026)
+
+These heterogeneous proxies are used to stress-test the model's sensitivity range.
+
+### Current Features
+
+- Baseline and refined inverse κ_dm estimators  
+- Entropy-weighted aggregation of heterogeneous proxies  
+- Multiple profile presets (Human, Neuralink_v2, AGI_Core)  
+- Dynamic efficiency modes (anti_saturation, monotonic, sweet_spot)  
+- Heuristic phase-transition threshold C_crit  
+- Comparison plot (baseline vs refined)  
+- Console summary table  
+- CSV export (profile & observation-level results)  
+- Bounded numerics (clipping, safe denominators, normalized temperature)  
+- SciPy entropy fallback (pure NumPy if SciPy not available)
 
 ### Quick Start
 
